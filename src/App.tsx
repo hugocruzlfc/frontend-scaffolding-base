@@ -2,8 +2,18 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import tailwindLogo from "./assets/tailwind.icon.svg";
 import tsLogo from "./assets/ts-logo.svg";
+import zodLogo from "./assets/zod-logo.svg";
+import vitestLogo from "./assets/vitest-logo.svg";
+import rhfLogo from "./assets/react-hook-form-logo.svg";
+import { SingUpForm } from "@/components/forms/SingUpForm";
+import { useState } from "react";
 
 function App() {
+  const [userName, setUserName] = useState<string | null>(null);
+
+  const handleOnSubmit = (data: { username: string }) => {
+    setUserName(data.username);
+  };
   return (
     <main className="flex items-center justify-center min-h-screen">
       <div className="text-center">
@@ -17,6 +27,17 @@ function App() {
               src={viteLogo}
               className="logo"
               alt="Vite logo"
+            />
+          </a>
+          <a
+            href="https://vitest.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={vitestLogo}
+              alt="Vitest logo"
+              className="w-12 h-12"
             />
           </a>
           <a
@@ -49,11 +70,39 @@ function App() {
             <img
               src={tailwindLogo}
               alt="Tailwind logo"
+              className="w-14 h-14"
+            />
+          </a>
+          <a
+            href="https://react-hook-form.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={rhfLogo}
+              alt="React Hook Form logo"
+              className="w-12 h-12"
+            />
+          </a>
+          <a
+            href="https://zod.dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={zodLogo}
+              alt="Zod logo"
+              className="w-12 h-12"
             />
           </a>
         </div>
-        <h1>Vite + React + Typescript + Tailwind CSS</h1>
-        <p>Hugo Cruz's personal template for frontend projects.</p>
+        <h1>
+          Vite + Vitest + React + Typescript + Tailwind CSS + React Hook Form +
+          Zod
+        </h1>
+        <p>Hugo Cruz's personal scaffolding template for frontend projects.</p>
+        <SingUpForm onSubmit={handleOnSubmit} />
+        {userName && <p className="py-5"> Hi 👋 ! {userName}</p>}
       </div>
     </main>
   );
