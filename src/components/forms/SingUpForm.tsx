@@ -19,24 +19,11 @@ export const SingUpForm: React.FC<SingUpFormProps> = ({ onSubmit }) => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="
-    flex
-    flex-row
-    justify-center
-    gap-1
-    mt-5
-    "
+      className="flex flex-row justify-center gap-1 mt-5"
     >
       <div>
         <input
-          className="
-        border
-        border-gray-300
-        rounded-md
-        p-2
-        h-10
-        ring-1
-        "
+          className="border border-gray-300 rounded-md p-2 h-10 ring-1"
           type="text"
           placeholder="Username"
           {...register('username')}
@@ -46,14 +33,7 @@ export const SingUpForm: React.FC<SingUpFormProps> = ({ onSubmit }) => {
         )}
       </div>
       <button
-        className="
-      bg-blue-500
-      text-white
-      rounded-md
-      p-2
-      h-10
-      hover:bg-blue-600
-        "
+        className="bg-blue-500 text-white rounded-md p-2 h-10 hover:bg-blue-600"
         type="submit"
       >
         Register
