@@ -1,7 +1,7 @@
-import React from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { signUpSchema, type TSignUpSchema } from "@/libs/forms.validation";
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { signUpSchema, type TSignUpSchema } from '@/libs/forms.validation';
 
 export interface SingUpFormProps {
   onSubmit: (data: TSignUpSchema) => void;
@@ -39,7 +39,7 @@ export const SingUpForm: React.FC<SingUpFormProps> = ({ onSubmit }) => {
         "
           type="text"
           placeholder="Username"
-          {...register("username")}
+          {...register('username')}
         />
         {errors.username && (
           <p className="text-red-500 text-xs mt-1">{errors.username.message}</p>
