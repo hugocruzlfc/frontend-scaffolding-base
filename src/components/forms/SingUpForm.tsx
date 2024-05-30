@@ -12,13 +12,19 @@ export const SingUpForm: React.FC<SingUpFormProps> = ({ onSubmit }) => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<TSignUpSchema>({
     resolver: zodResolver(signUpSchema),
   });
 
+  const handleOnSubmit = (data: TSignUpSchema) => {
+    onSubmit(data);
+    reset();
+  };
+
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
+      onSubmit={handleSubmit(handleOnSubmit)}
       className="flex flex-row justify-center gap-1 mt-5"
     >
       <div>
