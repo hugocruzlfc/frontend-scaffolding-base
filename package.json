@@ -9,7 +9,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hugocruzlfc/frontend-scaffoldnig-base"
+    "url": "https://github.com/hugocruzlfc/frontend-scaffolding-base"
   },
   "keywords": [
     "react",
@@ -17,7 +17,13 @@
     "typescript",
     "tailwindcss",
     "zod",
-    "vitejs"
+    "vitest",
+    "eslint",
+    "prettier",
+    "husky",
+    "commitlint",
+    "lint-staged",
+    "react-hook-form"
   ],
   "engines": {
     "node": ">=18.17.0"
