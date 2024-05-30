@@ -1,4 +1,4 @@
-name: package-test
+name: frontend-base-project
 on:
   push:
     branches:

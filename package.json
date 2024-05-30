@@ -1,6 +1,6 @@
 {
   "name": "@hugocruzlfc/frontend-base-project",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "author": {
     "name": "Hugo Cruz",
@@ -29,7 +29,7 @@
     "react-hook-form"
   ],
   "engines": {
-    "node": ">=18.17.0"
+    "node": ">=20.12.2"
   },
   "scripts": {
     "dev": "vite",
