@@ -6,9 +6,6 @@
     "name": "Hugo Cruz",
     "email": "hugocruzlfc@gmail.com"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "license": "MIT",
   "repository": {
     "type": "git",
